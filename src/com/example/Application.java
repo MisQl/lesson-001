@@ -1,3 +1,5 @@
+package com.example;
+
 public class Application {
 
     // field
@@ -37,6 +39,8 @@ public class Application {
 // alt + F8 - evaluate debugging code
 // shift + F6 - rename
 // ctrl + alt + L - format code
+// ctrl + alt + v - create variable
+// alt + insert - create class element
 
 // source code (.cpp) -> compile (windows x86) -> (.exe) -> run
 // source code (.cpp) -> compile (ubuntu ARM) -> (.exe) -> run
