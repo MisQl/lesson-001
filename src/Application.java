@@ -10,6 +10,22 @@ public class Application {
         } else {
             System.out.println("Hello World");
         }
+
+        System.out.println("--------");
+
+        int[] numbers = new int[10];
+        numbers[3] = 30;
+        numbers[7] = 70;
+
+        for (int i = 0; i < numbers.length; i++) { // classic for loop
+            System.out.println("Index: " + i + " value: " + numbers[i]);
+        }
+
+        System.out.println("--------");
+
+        for (int number : numbers) { // foreach
+            System.out.println("Value: " + number);
+        }
     }
 }
 
