@@ -1,49 +1,30 @@
 package com.example;
 
+import com.example.company.*;
+
 public class Application {
 
-    // field
-    // method (function)
-    // constructor
-
     public static void main(String[] args) {
-        if (args != null && args.length > 0) {
-            System.out.println("Hello World " + args[0]);
-        } else {
-            System.out.println("Hello World");
+        Employee employee = new Secretary("Alicja");
+        employee.complaining();
+        employee = new Manager("Jan");
+        employee.complaining();
+
+        if (employee instanceof Worker w) { // Worker w = (Worker) employee;
+            w.work();
+            w.takeBrake();
         }
 
-        System.out.println("--------");
+        System.out.println("Dzien wyplaty: " + Worker.SALARY_DAY);
 
-        int[] numbers = new int[10];
-        numbers[3] = 30;
-        numbers[7] = 70;
+        Employee employee2 = new Employee("Borys",3000) {
+            @Override
+            public void complaining() {
+                System.out.println("Ja nie narzekam");
+            }
+        };
 
-        for (int i = 0; i < numbers.length; i++) { // classic for loop
-            System.out.println("Index: " + i + " value: " + numbers[i]);
-        }
-
-        System.out.println("--------");
-
-        for (int number : numbers) { // foreach
-            System.out.println("Value: " + number);
-        }
+        employee2.show();
+        employee2.complaining();
     }
 }
-
-// alt + shift + F10 -> shift + F10 - run
-// shift + F9 - debug
-// F7 - move inside with debug
-// F8 - move with debug
-// F9 - move to the next breakpoint with debug
-// alt + F8 - evaluate debugging code
-// shift + F6 - rename
-// ctrl + alt + L - format code
-// ctrl + alt + v - create variable
-// alt + insert - create class element
-
-// source code (.cpp) -> compile (windows x86) -> (.exe) -> run
-// source code (.cpp) -> compile (ubuntu ARM) -> (.exe) -> run
-
-// source code (.java) -> compile -> bytecode (.class) -> JVM (windows x86) -> run
-//                                                     -> JVM (ubuntu ARM) -> run
