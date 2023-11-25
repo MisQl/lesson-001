@@ -7,7 +7,7 @@ public class Manager extends Employee implements Worker {
 
     public Manager(String name) {
         super(name, 2000);
-        System.out.println("Manager(String name)");
+//        System.out.println("Manager(String name)");
     }
 
     @Override

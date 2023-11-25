@@ -16,7 +16,7 @@ public abstract class Employee {
     }
 
     public Employee(String name, Integer salary) {
-        System.out.println("Employee(String name, Integer salary)");
+//        System.out.println("Employee(String name, Integer salary)");
         this.name = name;
         this.salary = salary;
     }
